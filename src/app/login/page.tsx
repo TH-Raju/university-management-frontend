@@ -20,12 +20,24 @@ const onSubmit: SubmitHandler<FormValues> = (data) => {
 
 const LoginPage = () => {
   return (
-    <Row>
-      <Col sm={12} md={16} lg={16}>
+    <Row
+      justify={"center"}
+      align={"middle"}
+      style={{
+        minHeight: "100vh",
+      }}
+    >
+      <Col sm={12} md={16} lg={10}>
         <Image src={loginImage} width={500} alt="login" />
       </Col>
       <Col sm={12} md={8} lg={8}>
-        <h1>First login your account</h1>
+        <h1
+          style={{
+            margin: "15px 0px",
+          }}
+        >
+          First login your account
+        </h1>
         <div>
           <Form submitHandler={onSubmit}>
             <div>
@@ -36,7 +48,11 @@ const LoginPage = () => {
                 label="User ID"
               ></FormInput>
             </div>
-            <div>
+            <div
+              style={{
+                margin: "15px 0px",
+              }}
+            >
               <FormInput
                 name="password"
                 type="password"
